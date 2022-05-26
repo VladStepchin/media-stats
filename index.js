@@ -8,7 +8,7 @@ const fs = require('fs');
 const directoryPath = path.join(__dirname, "app/media/images");
 
 
-function getFolderNames() {
+function start() {
     fs.readdir(directoryPath, (err, files) => {
         if (err)
             console.log(err);
@@ -47,4 +47,4 @@ function getStats(file, item) {
     });
 }
 
-getFolderNames()
+start()
